@@ -26,6 +26,9 @@ engine.MapCacher(&user, nil)
 
 当前实现了内存存储的CacheStore接口MemoryStore，如果需要采用其它设备存储，可以实现CacheStore接口。
 
+这些已经有一些实现，可供参考或直接使用
+[github.com/go-xorm/cachestore](https://github.com/go-xorm/cachestore)
+
 不过需要特别注意不适用缓存或者需要手动编码的地方：
 
 1. 当使用了`Distinct`,`Having`,`GroupBy`方法将不会使用缓存
